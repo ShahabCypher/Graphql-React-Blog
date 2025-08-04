@@ -1,5 +1,7 @@
 import { useQuery } from "@apollo/client";
+import { Grid } from "@mui/material";
 
+import Card from "./Card";
 import { GET_BLOGS_INFO } from "../../graphql/queries";
 
 const Posts = () => {
@@ -9,7 +11,15 @@ const Posts = () => {
 
   if (error) return <h4>Something went wrong</h4>;
 
-  return <div></div>;
+  return (
+    <Grid container spacing={2}>
+      {data.posts.map((post) => (
+        <Grid key={post.id} size={{ xs: 12, sm: 6, md: 4 }}>
+          <Card {...post} />
+        </Grid>
+      ))}
+    </Grid>
+  );
 };
 
 export default Posts;
