@@ -1,11 +1,12 @@
 import { Avatar, Divider, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const AuthorCard = ({ name, slug, avatar, last }) => {
   return (
     <>
       <Grid size={{ xs: 12 }} padding={2}>
-        <a
-          href={`/authors/${slug}`}
+        <Link
+          to={`/authors/${slug}`}
           style={{
             display: "flex",
             alignItems: "center",
@@ -16,7 +17,7 @@ const AuthorCard = ({ name, slug, avatar, last }) => {
           <Typography component="p" variant="p" color="text.secondary">
             {name}
           </Typography>
-        </a>
+        </Link>
       </Grid>
       {!last && (
         <Grid size={{ xs: 12 }}>
