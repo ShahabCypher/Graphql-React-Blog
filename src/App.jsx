@@ -1,9 +1,10 @@
 import Layout from "./layout/Layout";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <Layout>
-      <h1>React Graphql Blog</h1>
+      <HomePage />
     </Layout>
   );
 }
