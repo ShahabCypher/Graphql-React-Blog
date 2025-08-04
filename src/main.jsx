@@ -1,7 +1,11 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { createRoot } from "react-dom/client";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ThemeProvider } from "@mui/material";
 
 import App from "./App.jsx";
+import theme from "./mui/theme.js";
+
+import "./global.css";
 
 const HYGRAPH_URL = import.meta.env.VITE_HYGRAPH_URL;
 
@@ -12,6 +16,8 @@ const client = new ApolloClient({
 
 createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </ApolloProvider>
 );
