@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanitizeHtml from "sanitize-html";
 import { Avatar, Container, Grid, Typography } from "@mui/material";
 
+import Loader from "../components/Loader";
 import CardEL from "../components/posts/CardEL";
 import { GET_AUTHOR_INFO } from "../graphql/queries";
 
@@ -13,7 +14,7 @@ const AuthorPage = () => {
     variables: { slug },
   });
 
-  if (loading) return <h4>Loading...</h4>;
+  if (loading) return <Loader />;
   if (error) return <h4>Something went wrong...</h4>;
 
   const {
