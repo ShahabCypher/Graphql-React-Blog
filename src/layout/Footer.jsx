@@ -12,7 +12,14 @@ const Footer = () => {
         textAlign="center"
         mt={10}
       >
-        Sample Blog Project with GraphQL
+        Sample Blog Project with GraphQL | By{" "}
+        <a
+          href="https://github.com/ShahabCypher"
+          target="_blank"
+          style={{ color: "inherit" }}
+        >
+          Cypher
+        </a>
       </Typography>
     </footer>
   );
