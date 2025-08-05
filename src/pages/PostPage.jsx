@@ -5,6 +5,7 @@ import { ArrowBackRounded } from "@mui/icons-material";
 import sanitizeHtml from "sanitize-html";
 
 import Loader from "../components/Loader";
+import CommentForm from "../components/comment/CommentForm";
 import { GET_POST_INFO } from "../graphql/queries";
 
 const PostPage = () => {
@@ -69,6 +70,9 @@ const PostPage = () => {
               __html: sanitizeHtml(post.content.html),
             }}
           ></div>
+        </Grid>
+        <Grid size={{ xs: 12 }}>
+          <CommentForm slug={slug} />
         </Grid>
       </Grid>
     </Container>
