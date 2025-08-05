@@ -30,17 +30,32 @@ const CardEL = ({ title, slug, coverPhoto, author }) => {
         image={coverPhoto.url}
         alt={slug}
       />
-      <CardContent>
+      <CardContent
+        sx={{
+          height: "90px",
+          pb: "16px !important",
+          mb: 1,
+        }}
+      >
         <Typography
           component="h3"
           variant="h6"
           color="text.primary"
           fontWeight={600}
+          sx={{
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+            WebkitLineClamp: "3",
+            WebkitBoxOrient: "vertical",
+            lineHeight: 1.4,
+            maxHeight: "4.2em",
+          }}
         >
           {title}
         </Typography>
       </CardContent>
-      <Divider variant="middle" sx={{ margin: "10px" }} />
+      <Divider variant="middle" sx={{ mb: 1 }} />
       <CardActions>
         <Link
           to={`/posts/${slug}`}
