@@ -16,7 +16,7 @@ const CardEL = ({ title, slug, coverPhoto, author }) => {
     <Card sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 3 }}>
       {author && (
         <CardHeader
-          avatar={<Avatar src={author.avatar.url} sx={{ marginLeft: 2 }} />}
+          avatar={<Avatar src={author.avatar.url} />}
           title={
             <Typography component="p" variant="p" color="text.secondary">
               {author.name}
