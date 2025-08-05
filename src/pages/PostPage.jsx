@@ -6,6 +6,7 @@ import sanitizeHtml from "sanitize-html";
 
 import Loader from "../components/Loader";
 import CommentForm from "../components/comment/CommentForm";
+import Comments from "../components/comment/Comments";
 import { GET_POST_INFO } from "../graphql/queries";
 
 const PostPage = () => {
@@ -74,6 +75,9 @@ const PostPage = () => {
         <Grid size={{ xs: 12 }}>
           <CommentForm slug={slug} />
         </Grid>
+      </Grid>
+      <Grid size={{ xs: 12 }}>
+        <Comments slug={slug} />
       </Grid>
     </Container>
   );
