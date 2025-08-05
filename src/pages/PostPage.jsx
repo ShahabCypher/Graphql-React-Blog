@@ -65,8 +65,11 @@ const PostPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid size={{ xs: 12 }} mt={5}>
+        <Grid size={{ xs: 12 }} mt={5} px={2}>
           <div
+            style={{
+              lineHeight: 2.5,
+            }}
             dangerouslySetInnerHTML={{
               __html: sanitizeHtml(post.content.html),
             }}

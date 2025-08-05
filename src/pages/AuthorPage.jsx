@@ -40,6 +40,9 @@ const AuthorPage = () => {
         </Grid>
         <Grid size={{ xs: 12 }} mt={5}>
           <div
+            style={{
+              lineHeight: 2.5,
+            }}
             dangerouslySetInnerHTML={{
               __html: sanitizeHtml(description.html),
             }}
