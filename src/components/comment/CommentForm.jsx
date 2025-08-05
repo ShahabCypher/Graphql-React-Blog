@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useMutation } from "@apollo/client";
 import { toast, ToastContainer } from "react-toastify";
@@ -10,6 +10,7 @@ const CommentForm = ({ slug }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
+  const sentComment = useRef(false);
 
   const [sendComment, { loading, error, data }] = useMutation(SEND_COMMENT, {
     variables: {
@@ -23,15 +24,20 @@ const CommentForm = ({ slug }) => {
   const sendHandler = () => {
     if (name && email && text) {
       sendComment();
+      setName("");
+      setEmail("");
+      setText("");
+      sentComment.current = true;
     } else {
       toast.warn("Please fill all the fields", { position: "top-center" });
     }
   };
 
-  if (data) {
+  if (data && sentComment.current) {
     toast.success("Comment sent successfully, waiting for approval", {
       position: "top-center",
     });
+    sentComment.current = false;
   }
 
   return (
