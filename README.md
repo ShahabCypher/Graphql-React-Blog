@@ -1,10 +1,10 @@
 # Graphql React Blog
 
-A modern blogging platform built with React and GraphQL, featuring a polished Material UI design. This project allows users to create, read, and manage blog posts through a clean interface using Hygraph CMS as the backend. Users can browse posts, filter by categories, search content, and interact with the blog in a responsive design that works seamlessly across all devices.
+A modern blogging platform built with React and GraphQL, featuring a polished Material UI design. This project allows users to read blog posts and add comment through a clean interface using Hygraph CMS as the backend. Users can browse posts, and interact with the blog in a responsive design that works seamlessly across all devices.
 
 ## Features
 
-- Create, read, update, and delete blog posts
+- Add comment for posts
 - Fast and responsive user interface with Material UI components
 - Clean and modern design
 - Easy to customize and extend
