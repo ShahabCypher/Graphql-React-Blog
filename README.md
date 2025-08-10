@@ -20,4 +20,6 @@ A modern blogging platform built with React and GraphQL, featuring a polished Ma
 
 This project is licensed under the MIT License.
 
-Note: This project was built as part of a React course on [BotoStart](https://botostart.ir/)
+## Notes
+
+- This project was built as part of a React course on [BotoStart](https://botostart.ir/)
