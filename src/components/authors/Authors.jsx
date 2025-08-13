@@ -35,7 +35,7 @@ const Authors = () => {
             border: "1px solid #ccc",
             outline: "none",
             fontSize: "14px",
-            width: "250px",
+            width: "100%",
           }}
         />
       </Box>

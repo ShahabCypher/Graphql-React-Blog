@@ -14,11 +14,14 @@ const Posts = () => {
 
   if (error) return <h4>Something went wrong</h4>;
 
+  // Posts Search
   const filteredPosts = data.posts.filter((post) =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
+
+    // Search bar for posts
     <div>
       <div style={{ marginBottom: "20px", textAlign: "center" }}>
         <input
@@ -30,12 +33,13 @@ const Posts = () => {
             padding: "10px",
             display : "flex" ,
             width: "100%",
-            maxWidth: "400px",
+            maxWidth: "100%",
             fontSize: "16px",
             borderRadius: "8px",
             border: "1px solid #ccc",
             outline: "none",
-            justifyContent:"left"
+            justifyContent:"left",
+            cursor:"pointer"  
           }}
         />
       </div>
